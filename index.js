@@ -20,12 +20,12 @@ $(function() {
         </li>`);
     });
 
-    $('span').click(function(event) {
+    $('.shopping-item-toggle').on('click', '.button-label', function(event) {
         $(this).toggleClass('.shopping-item__checked');
     });
-
-    $('.shopping-item-toggle').on('click', 'li', function(event) {
-        $(this).remove();
+    
+    $('.shopping-item-delete').on('click', 'li', function(event) {
+        $(this).closest('li').remove();
     });
 
 
