@@ -21,7 +21,7 @@ $(function() {
     });
 
     $('.shopping-item-toggle').on('click', '.button-label', function(event) {
-        $(this).toggleClass('.shopping-item__checked');
+        $(this).closest('.shopping-item').toggleClass();
     });
     
     $('.shopping-item-delete').on('click', 'li', function(event) {
