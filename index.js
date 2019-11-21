@@ -10,8 +10,8 @@ $(function() {
         $('#shopping-list-entry').val('');
 
         // adding item to the bottom of the shopping list in li format
-        $('.shopping-list').append(`
-        <li>
+        $('.shopping-list').append(
+        `<li>
             <span class="shopping-item">${userText}</span>
             <div class="shopping-item-controls">
                 <button class="shopping-item-toggle">
