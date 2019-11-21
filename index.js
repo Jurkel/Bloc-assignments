@@ -4,7 +4,6 @@ $(function() {
         event.preventDefault();
 
         const userText = $(event.currentTarget).find('#shopping-list-entry').val();
-        // userText.val("");
 
         $('.shopping-list').append(`
         <li>
@@ -20,11 +19,11 @@ $(function() {
         </li>`);
     });
 
-    $('.shopping-item-toggle').on('click', '.button-label', function(event) {
-        $(this).closest('.shopping-item').toggleClass();
+    $('ul').on('click', '.shopping-item-toggle', function(event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
     
-    $('.shopping-item-delete').on('click', 'li', function(event) {
+    $('ul').on('click', '.shopping-item-delete', function(event) {
         $(this).closest('li').remove();
     });
 
